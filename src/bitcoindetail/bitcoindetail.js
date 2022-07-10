@@ -1,6 +1,6 @@
 import React from "react";
 function bitcoindetail(props) {
-
+  console.log(props.price.data)
   return (
     // eslint-disable-next-line no-unreachable
     <div className="detailframe">
@@ -15,7 +15,7 @@ function bitcoindetail(props) {
         <a href="https://www.naver.com">자세히 보기</a>
       </div>
       <div>
-        {props.price}
+        {props.price ? props.price.data["data"][props.symbol]["closing_price"]:0}
         {/*props.price[1]["BTC"]["closing_price"]*/}
       </div>
 
