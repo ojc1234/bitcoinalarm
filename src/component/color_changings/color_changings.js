@@ -4,7 +4,7 @@ export default function colorChaing(props)
 {
     return(
         <div className="colorChangings">
-            <img src={listImg} height='12px'>
+            <img src={listImg} height='30px'>
             </img>
         </div>
     )
