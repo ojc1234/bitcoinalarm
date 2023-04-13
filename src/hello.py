@@ -255,3 +255,40 @@ print("%8.2f + %8.2f = %8.2f"%(a,b,a+b))
 print("%8.2f - %8.2f = %8.2f"%(a,b,a-b))
 print("%8.2f * %8.2f = %8.2f"%(a,b,a*b))
 print("%8.2f / %8.2f = %8.2f"%(a,b,a/b))
+#연습문제 7
+input = int(input("저축금액 입력: "))
+input = 5000000
+이자 = input *0.0375
+세금 = 이자 * 0.15
+print("원금 {0:10,.0f}원".format(input))
+print("이자 {0:10,.0f}원".format(이자))
+print("세금 {0:10,.0f}원".format(세금))
+print("최종 {0:10,.0f}원".format(input+이자-세금))
+
+
+x = 10
+
+inpt = int(input("한화 금액 입력 --> "))
+dol = inpt // 1135
+print("{0:0,d}".format(inp))
+print("{0:0,.0f}".format(dol))
+#8
+inp = int(input("정수 입력 :"))
+print("10진수:{0:16d}".format(inp))
+print(" 2진수:{0:16b}".format(inp))
+print(" 8진수:{0:16o}".format(inp))
+print("16진수:{0:16x}".format(inp))
+#9
+first = int(input("정수 1 입력"))
+sec =  int(input("정수 2 입력"))
+print("{0:<5d} + {1:5d}= {2:>5d}".format(first,sec,first+sec))
+print("{0:<5d} - {1:5d}= {2:>5d}".format(first,sec,first-sec))
+print("{0:<5d} * {1:5d}= {2:>5d}".format(first,sec,first*sec))
+print("{0:<5d} / {1:5d}= {2:>5.2f}".format(first,sec,first/sec))
+#10
+first = float(input("실수 1 입력"))
+sec =  float(input("실수 2 입력"))
+print("{0:<8.2f} + {1:8.2f}= {2:>8.2f}".format(first,sec,first+sec))
+print("{0:<8.2f} - {1:8.2f}= {2:>8.2f}".format(first,sec,first-sec))
+print("{0:<8.2f} * {1:8.2f}= {2:>8.2f}".format(first,sec,first*sec))
+print("{0:<8.2f} / {1:8.2f}= {2:>8.2f}".format(first,sec,first/sec))
