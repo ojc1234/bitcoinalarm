@@ -256,14 +256,13 @@ print("%8.2f - %8.2f = %8.2f"%(a,b,a-b))
 print("%8.2f * %8.2f = %8.2f"%(a,b,a*b))
 print("%8.2f / %8.2f = %8.2f"%(a,b,a/b))
 #연습문제 7
-input = int(input("저축금액 입력: "))
-input = 5000000
-이자 = input *0.0375
-세금 = 이자 * 0.15
-print("원금 {0:10,.0f}원".format(input))
+inp = int(input("저축금액 입력: ")) #저축 금액 입력
+이자 = input *0.0375 #이자 계산
+세금 = 이자 * 0.15 #세금 계산
+print("원금 {0:10,.0f}원".format(input)) #포멧 출력
 print("이자 {0:10,.0f}원".format(이자))
 print("세금 {0:10,.0f}원".format(세금))
-print("최종 {0:10,.0f}원".format(input+이자-세금))
+print("최종 {0:10,.0f}원".format(input+이자-세금)) #최종금액 포멧출력
 
 
 x = 10
@@ -273,22 +272,240 @@ dol = inpt // 1135
 print("{0:0,d}".format(inp))
 print("{0:0,.0f}".format(dol))
 #8
-inp = int(input("정수 입력 :"))
-print("10진수:{0:16d}".format(inp))
-print(" 2진수:{0:16b}".format(inp))
-print(" 8진수:{0:16o}".format(inp))
-print("16진수:{0:16x}".format(inp))
+inp = int(input("정수 입력 :")) #인풋
+print("10진수:{0:16d}".format(inp)) #10진수 출력
+print(" 2진수:{0:16b}".format(inp)) #2진수 출력
+print(" 8진수:{0:16o}".format(inp)) #8진수 출력
+print("16진수:{0:16x}".format(inp)) #16진수 출력
 #9
 first = int(input("정수 1 입력"))
 sec =  int(input("정수 2 입력"))
-print("{0:<5d} + {1:5d}= {2:>5d}".format(first,sec,first+sec))
-print("{0:<5d} - {1:5d}= {2:>5d}".format(first,sec,first-sec))
-print("{0:<5d} * {1:5d}= {2:>5d}".format(first,sec,first*sec))
-print("{0:<5d} / {1:5d}= {2:>5.2f}".format(first,sec,first/sec))
+print("{0:<5d} + {1:5d}= {2:>5d}".format(first,sec,first+sec)) #포멧출력
+print("{0:<5d} - {1:5d}= {2:>5d}".format(first,sec,first-sec)) #포멧출력
+print("{0:<5d} * {1:5d}= {2:>5d}".format(first,sec,first*sec)) #포멧출력
+print("{0:<5d} / {1:5d}= {2:>5.2f}".format(first,sec,first/sec)) #포멧출력
 #10
 first = float(input("실수 1 입력"))
 sec =  float(input("실수 2 입력"))
-print("{0:<8.2f} + {1:8.2f}= {2:>8.2f}".format(first,sec,first+sec))
-print("{0:<8.2f} - {1:8.2f}= {2:>8.2f}".format(first,sec,first-sec))
-print("{0:<8.2f} * {1:8.2f}= {2:>8.2f}".format(first,sec,first*sec))
-print("{0:<8.2f} / {1:8.2f}= {2:>8.2f}".format(first,sec,first/sec))
+print("{0:<8.2f} + {1:8.2f}= {2:>8.2f}".format(first,sec,first+sec)) #실수 포멧 출력
+print("{0:<8.2f} - {1:8.2f}= {2:>8.2f}".format(first,sec,first-sec)) #실수 포멧 출력
+print("{0:<8.2f} * {1:8.2f}= {2:>8.2f}".format(first,sec,first*sec)) #실수 포멧 출력
+print("{0:<8.2f} / {1:8.2f}= {2:>8.2f}".format(first,sec,first/sec)) #실수 포멧 출력
+
+#ssfd
+import turtle as t
+
+t.shape('turtle')
+t.shapesize(3)
+for i in range(7):
+    t.forward(100)
+    t.right(360/7)
+count = int(input("몇 까지 셀까요?"))
+for i in range(1,count+1):
+    print(f"count {i}")
+print("end")
+
+mincount = int(input("작은 양수 입력"))
+maxcount = int(input("큰 양수 입력"))
+for i in range(mincount,maxcount+1):
+    print(f"count {i}")
+print("end")
+
+
+
+mincount = int(input("작은 양수 입력"))
+maxcount = int(input("큰 양수 입력"))
+i = mincount
+
+while i <= maxcount:
+    print(f"count {i}")
+    i = i+1
+
+print("end")
+
+n=1
+sum = 0
+while n<=1000000:
+    sum = sum + n
+    n = n + 1
+print("합계: ",sum)
+
+sum = 0
+for n in range(1,501):
+    sum += n
+print("합계: ",sum)
+
+
+
+i = int(input("입력"))
+sum = 0
+for n in range(1,i+1):
+    sum += n
+print("합계: ",sum)
+
+start = int(input("1입력"))
+end = int(input("2입력"))
+sum = 0
+for n in range(start,end+1):
+    sum += n
+print("합계: ",sum)
+
+import sys
+start = int(input("1입력"))
+end = int(input("2입력"))
+sum = 0
+if start > end:
+    print("시작하는 수가 끝나는 수보다 크면 안됩니다.")
+    sys.exit()
+for n in range(start,end+1):
+    sum += n
+print("합계: ",sum)
+
+
+## 포문연습
+
+#7
+start = 0
+for i in range(30,71):
+    start = start + i
+print(start)
+
+#9
+import sys
+inp  = int(input("구구단 몇단"))
+if inp > 9:
+    print("잘못된 값이 입력되었습니다")
+    sys.exit()
+for i in range (1,10):
+    print(f"{inp} x {i} = {inp*i}")
+
+#10 
+first = int(input("정수 A입력"))
+sec = int(input("정수 B입력"))
+
+temp = 0
+
+for i in range(first,sec+1):
+    temp = temp + i
+
+print(f"{first}부터 {sec}까지 더한 값 : {temp}")
+
+#12
+start = 0
+for i in range(30,71):
+    if (i % 3 == 0):
+        start = start + i
+print(start)
+
+#15
+import turtle as t
+
+t.shape()
+t.Pen()
+for i in range(10,101,10):
+    t.circle(i)
+
+
+def next666(num):
+    for i in range(num):
+        num = num+ i
+        if ("666" in str(num)):
+            return num
+inp = int(input())
+temp = 666
+for i in range(inp):
+    temp = next666(temp)
+
+
+
+
+ONETOTEN = range(1,101)
+TWOBYTWO = []
+for i in range(1,101):
+    TWOBYTWO.append(object)(ONETOTEN)
+
+for i in range(100):
+    for i in range(100):
+        print(TWOBYTWO)
+
+size = int(input())
+stack = []
+for i in range(size):
+    data = input()
+    data = data.split(" ")
+    num = int(data[1])
+    if data[0] == "push":
+        stack.append(num)
+        pass
+    if data[0] == "pop":
+        stack.pop(num)
+        print(num)
+        pass
+    if data[0] == "size":
+        print(stack.count())
+
+        pass
+    if data[0] == "empty":
+        if data.count() == 0:
+            print(1)
+        else:
+            print(0)
+        pass
+    if data[0] == "top":
+        print(data[-1])
+        pass
+
+
+####
+a = int(input("a"))
+b = int(input("b"))
+c = int(input("c"))
+import math as m
+D = b**2 - 4*a*c
+if D < 0:
+    print("해없음")
+if D == 0:
+    x = (-b + m.sqrt(b**2-4*a*c))/2*a
+
+    print(x)
+if D > 0:
+    x1 = (-b + m.sqrt(b**2-4*a*c))/2*a
+    x2 = (-b - m.sqrt(b**2-4*a*c))/2*a
+
+    print(x1,x2)
+####
+import math as m
+for i in range(0,181,15):
+    print(f"각도 {i},사인값:{round(m.sin(m.radians(i)),2)}")
+
+size = int(input())
+stack = []
+for i in range(size):
+    data1 = input()
+    try:
+        data = data1.split(" ")
+        int(data[1])
+    except:
+        data = [data1,0]
+    num = int(data[1])
+    if data[0] == "push":
+            stack.append(num)
+    if data[0] == "pop":
+        try:
+            stack.pop(num)
+            print(num)
+        except:
+            print(-1)
+
+    if data[0] == "size":
+        print(len(stack))
+    if data[0] == "empty":
+        if len(stack) == 0:
+            print(1)
+        else:
+            print(0)
+    if data[0] == "top":
+        if len(stack) == 0:
+            print(-1)
+        else:
+            print(stack[-1])

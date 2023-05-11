@@ -112,12 +112,16 @@ def ex11():
         print("시험을 좀 못봤군요. 다음에는 잘 봐요.")
     else:
         print("완전히 망했군요")
+
+
 def cheakyun(input):
     if (input % 400 == 0):
         return True
-    if(input % 100 != 0 and input % 4 == 0):
+    if (input % 100 != 0 and input % 4 == 0):
         return True
     return False
+
+
 def ex12():
     input1 = int(input("윤년채크"))
     result = cheakyun(input1)
@@ -125,6 +129,8 @@ def ex12():
         print("윤년입니다")
     else:
         print("윤년이아닙니다")
+
+
 def ex13():
     input1 = int(input("정수 입력 ->"))
     if input1 > 0:
@@ -133,6 +139,8 @@ def ex13():
         print("0입니다")
     if input1 < 0:
         print("음수입니다")
+
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     ex13()
@@ -143,3 +151,79 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+r1 = 10
+r2 = 15
+r3 = 20
+pi = 3.14
+rlist = [r1, r2, r3]
+
+
+def 원넓이구하기(r):
+    return r*r*pi
+
+
+def 원둘레구하기(r):
+    return r*2*pi
+
+
+for i in range(3):
+    print("반지름이 %3d인 원의 둘레는 %8.2f 입니다." % (rlist[i], 원둘레구하기(rlist[i])))
+    print("반지름이 %3d인 원의 넓이는 %8.2f 입니다." % (rlist[i], 원넓이구하기(rlist[i])))
+
+#6
+def f(x):
+    return 2*x + 5
+
+
+for i in range(15, 26, 5):
+    print(f"f({i})= {f(i)}")
+
+#7
+def algo(input):
+    if input >= 90:
+        return("A")
+    elif input >= 80:
+        return("B")
+    elif input >= 70:
+        return("C")
+    else:
+        return("D")
+while True:
+    inp = input("점수 입력 :")
+    result = algo(int(inp))
+    print(f"당신의 점수 {inp}")
+    print(f"당신의 학점 {result}")
+
+#8
+def algo(input):
+    if input % 2 == 0: 
+        return("짝수")
+    else:
+        return("홀수")
+while True:
+    inp = input("양의 정수 입력")
+    result = algo(int(inp))
+    print(f"{result}입니다")
+import time
+n = 1
+while n <= 5:
+    print("파이썬 재밌네")
+    time.sleep(1)
+    n = n+1
+print("파이썬 쉽네")
+
+import time
+n = 1
+while n <= 10:
+    print(n)
+    n = n+1
+    time.sleep(1)
+print("숫자 세기 끝")
+
+n = 100
+while n <= 150:
+    print(n)
+    n += 5
+
+print("종료합니다")
