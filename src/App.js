@@ -10,20 +10,29 @@ import Bitcoindetail from "./component/bitcoindetail/bitcoindetail";
 //state["BTC"]["closing_price"]
 function App() {
   const [state, stateSet] = useState({ price: 0 });
-  const [backgroundColor, backgroundColorSet] = useState({ color: "#9040FF"});
-
+  const [backgroundColor, backgroundColorSet] = useState({ color: "#9040FF" });
+  setInterval(() => {
+    axios
+      .get("https://api.bithumb.com/public/ticker/ALL_KRW")
+    .then((value) => {
+      stateSet({ price: value });
+    })
+    .catch(() => {
+      stateSet({ price: 0 });
+    });
+  }, 100)
   //statefun(axios.get("https://api.bithumb.com/public/ticker/ALL_KRW"));
   console.log(state);
+  const [coinlist,setcoinlist] = [useState({list : ["BTC", "ETH", "XRP"]})]
+  console.log(coinlist[0])
   return (
     <div className="App">
-      <div className="App-nav"><ListColor className="ListColor"/></div>
-      <header className="App-header" style={{backgroundColor:backgroundColor.color}}>
+      <div className="App-nav"><ListColor className="ListColor" /></div>
+      <header className="App-header" style={{ backgroundColor: backgroundColor.color }}>
         <Sitename className="App-name" />
-        <AjaxButton stateSet = {stateSet}/>
+        <AjaxButton stateSet={stateSet} />
         <div className="bitcoin_detail_list">
-          <Bitcoindetail coinname="비코" price={state["price"]} symbol="BTC" />
-          <Bitcoindetail coinname="이더" price={state["price"]} symbol="ETH" />
-          <Bitcoindetail coinname="리플" price={state["price"]} symbol="XRP" />
+          {coinlist[0].list.map( function(a,i)  {return <Bitcoindetail coinname={a} price={state["price"]} symbol={a} id = {"coin"+ i } />})}
         </div>
       </header>
     </div>
