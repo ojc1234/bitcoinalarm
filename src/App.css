@@ -8,10 +8,10 @@
 .App-nav
 {
   text-align: left;
-  justify-content: left;
+  justify-content: right;
   align-items: flex-end;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .App-logo {
   height: 40vmin;
@@ -27,10 +27,11 @@
 .App-header {
   background-color: #303234;
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
