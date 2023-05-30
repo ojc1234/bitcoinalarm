@@ -11,16 +11,7 @@ import Bitcoindetail from "./component/bitcoindetail/bitcoindetail";
 function App() {
   const [state, stateSet] = useState({ price: 0 });
   const [backgroundColor, backgroundColorSet] = useState({ color: "#9040FF" });
-  setInterval(() => {
-    axios
-      .get("https://api.bithumb.com/public/ticker/ALL_KRW")
-    .then((value) => {
-      stateSet({ price: value });
-    })
-    .catch(() => {
-      stateSet({ price: 0 });
-    });
-  }, 100)
+
   //statefun(axios.get("https://api.bithumb.com/public/ticker/ALL_KRW"));
   console.log(state);
   const [coinlist,setcoinlist] = [useState({list : ["BTC", "ETH", "XRP"]})]
