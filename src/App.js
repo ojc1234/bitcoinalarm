@@ -25,9 +25,9 @@ function App() {
       <header
         className="App-header"
         style={{ backgroundColor: backgroundColor.color }}
-      >
+      > 
+
         <div style={{"flex":"auto","maxHeight":"80vh"}}>
-          
           <Sitename className="App-name" />
           <AjaxButton stateSet={stateSet} />
           <div className="bitcoin_detail_list">
